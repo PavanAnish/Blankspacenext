@@ -136,7 +136,13 @@ export default function Home() {
 
     </div>
   </div>
+  {/* DEBUG: CUBIC ROTATION */}
+<div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+  <div className="cubic-3d" />
+</div>
 
+
+    
   {/* BLURRED GRADIENT DECORATION */}
   <div
     className="absolute -left-40 top-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full opacity-40 blur-3xl"

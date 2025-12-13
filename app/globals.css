@@ -72,4 +72,110 @@ body {
   -webkit-mask: radial-gradient(circle, transparent 45%, black 46%);
   mask: radial-gradient(circle, transparent 45%, black 46%);
 }
+/* ================================
+   3D CUBIC ROTATION (Community)
+   ================================ */
+
+.cubic-3d {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cubeRotate 22s linear infinite;
+  opacity: 0.25;
+}
+
+/* Create cube faces using pseudo layers */
+.cubic-3d::before,
+.cubic-3d::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(155, 75, 249, 0.6);
+  transform-style: preserve-3d;
+}
+
+.cubic-3d::before {
+  transform: rotateX(60deg) rotateY(0deg);
+  border-color: rgba(199, 138, 252, 0.6);
+}
+
+.cubic-3d::after {
+  transform: rotateY(60deg) rotateX(0deg);
+  border-color: rgba(155, 75, 249, 0.5);
+}
+
+/* Main rotating frame */
+.cubic-3d {
+  border: 2px solid rgba(155, 75, 249, 0.7);
+}
+
+/* Rotation animation */
+@keyframes cubeRotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+/* Responsive scaling */
+@media (max-width: 900px) {
+  .cubic-3d {
+    width: 220px;
+    height: 220px;
+  }
+}
+/* ================================
+   FINAL 3D CUBIC ROTATION (COMMUNITY)
+   ================================ */
+
+.cubic-3d {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cubeRotate 22s linear infinite;
+  opacity: 0.32;
+}
+
+/* Cube layers */
+.cubic-3d::before,
+.cubic-3d::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(155, 75, 249, 0.65);
+  transform-style: preserve-3d;
+}
+
+/* Depth illusion */
+.cubic-3d::before {
+  transform: rotateX(65deg);
+  border-color: rgba(199, 138, 252, 0.65);
+}
+
+.cubic-3d::after {
+  transform: rotateY(65deg);
+  border-color: rgba(155, 75, 249, 0.55);
+}
+
+/* Rotation */
+@keyframes cubeRotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+/* Responsive scaling */
+@media (max-width: 900px) {
+  .cubic-3d {
+    width: 220px;
+    height: 220px;
+  }
+}
 
