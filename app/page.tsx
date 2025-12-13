@@ -72,6 +72,97 @@ export default function Home() {
 
         </div>
       </section>
-    </main>
-  );
+      {/* COMMUNITY VALUES SECTION */}
+      <section className="relative py-28 overflow-hidden bg-white">
+  <div className="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16">
+
+    {/* LEFT CONTENT */}
+    <div>
+      <p className="uppercase tracking-widest text-sm text-purple-500 font-semibold mb-4">
+        Built Around People
+      </p>
+
+      <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+        Our Community Values
+      </h2>
+
+      <p className="mt-6 text-gray-600 max-w-md">
+        Blankspace is a people-first community focused on learning,
+        collaboration, and real-world growth.
+      </p>
+    </div>
+
+    {/* RIGHT ACCORDION */}
+    <div className="space-y-4">
+
+      {[
+        {
+          title: "Mentorship & Support",
+          content:
+            "Connect with mentors, educators, and peers who guide you through learning and growth."
+        },
+        {
+          title: "Real-World Collaboration",
+          content:
+            "Work on meaningful projects with people who value practical outcomes."
+        },
+        {
+          title: "Learning Resources",
+          content:
+            "Access curated tools, templates, and shared knowledge built by the community."
+        },
+        {
+          title: "Events & Workshops",
+          content:
+            "Participate in discussions, workshops, and meetups that spark ideas and action."
+        }
+      ].map((item, index) => (
+        <details
+          key={index}
+          className="group rounded-2xl border border-gray-200 bg-white shadow-sm open:shadow-lg transition"
+        >
+          <summary className="flex cursor-pointer items-center justify-between px-6 py-5 font-semibold text-gray-900">
+            {item.title}
+            <span className="text-purple-500 group-open:rotate-45 transition-transform text-xl">
+              +
+            </span>
+          </summary>
+
+          <div className="px-6 pb-5 text-gray-600">
+            {item.content}
+          </div>
+        </details>
+      ))}
+
+    </div>
+  </div>
+
+  {/* BLURRED GRADIENT DECORATION */}
+  <div
+    className="absolute -left-40 top-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full opacity-40 blur-3xl"
+    style={{
+      background: "radial-gradient(circle, #C78AFC, #9B4BF9)"
+    }}
+  />
+
+  {/* CUBIC RING DECORATION */}
+  <div
+    className="
+      absolute
+      right-[-120px]
+      bottom-[-120px]
+      w-[360px]
+      h-[360px]
+      rounded-full
+      opacity-30
+      blur-md
+      animate-spin-slow
+      bg-[conic-gradient(from_0deg,#9B4BF9,#C78AFC,#9B4BF9)]
+      ring-mask
+    "
+  />
+      </section>
+
+          </main>
+      );
 }
