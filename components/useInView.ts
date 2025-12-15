@@ -16,7 +16,10 @@ export function useInView<T extends HTMLElement>() {
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      {
+        threshold: 0.2,
+        rootMargin: "0px 0px -100px 0px",
+      }
     );
 
     observer.observe(ref.current);
