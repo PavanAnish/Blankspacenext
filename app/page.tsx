@@ -12,6 +12,7 @@ export default function Home() {
           background: "linear-gradient(120deg, #2b1b4a, #9B4BF9, #C78AFC)",
         }}
       >
+        
         {/* ROTATING CUBIC RING */}
         <div
           className="
