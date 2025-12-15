@@ -2,7 +2,9 @@ import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white overflow-hidden">
+    <main className="page-enter page-enter-active min-h-screen bg-white overflow-hidden">
+
+    
       <Navbar />
 
       {/* HERO SECTION (MERGED + ANIMATED) */}
@@ -12,7 +14,7 @@ export default function Home() {
           background: "linear-gradient(120deg, #2b1b4a, #9B4BF9, #C78AFC)",
         }}
       >
-        
+
         {/* ROTATING CUBIC RING */}
         <div
           className="

@@ -178,15 +178,32 @@ body {
     height: 220px;
   }
 }
-/* Scroll fade-in */
+
+/* =========================
+   PAGE TRANSITION
+   ========================= */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* =========================
+   FADE-IN ON SCROLL
+   ========================= */
 .fade-in {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(40px) scale(0.96);
+  transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
 .fade-in.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
