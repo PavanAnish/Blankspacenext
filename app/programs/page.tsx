@@ -97,7 +97,6 @@ function ProgramCard({
 }
 
 
-
 export default function ProgramsPage() {
   return (
     <main className="page-enter page-enter-active min-h-screen bg-[#f6f5fb]">
