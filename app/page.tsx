@@ -80,22 +80,35 @@ export default function Home() {
 <section className="bg-white py-16">
   <div className="marquee">
     <div className="marquee-track">
+
       {/* First set */}
       <span className="marquee-item">LEARN</span>
       <span className="marquee-item">BUILD</span>
+
+      <span className="marquee-item marquee-highlight">
+        BLANKSPACE
+      </span>
+
       <span className="marquee-item">COLLABORATE</span>
       <span className="marquee-item">MENTOR</span>
       <span className="marquee-item">CREATE</span>
 
-      {/* Duplicate set (required for seamless loop) */}
+      {/* Duplicate set */}
       <span className="marquee-item">LEARN</span>
       <span className="marquee-item">BUILD</span>
+
+      <span className="marquee-item marquee-highlight">
+        BLANKSPACE
+      </span>
+
       <span className="marquee-item">COLLABORATE</span>
       <span className="marquee-item">MENTOR</span>
       <span className="marquee-item">CREATE</span>
+
     </div>
   </div>
 </section>
+
 
       {/* COMMUNITY VALUES SECTION */}
       <section className="relative py-28 overflow-hidden bg-white">
