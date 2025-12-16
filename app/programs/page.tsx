@@ -6,31 +6,37 @@ import { useInView } from "@/components/useInView";
 
 const programs = [
   {
+    slug: "foundations",
     title: "Foundations of Learning",
     description:
       "Core principles and frameworks that help educators design meaningful learning experiences.",
   },
   {
+    slug: "mentorship",
     title: "Community Mentorship",
     description:
       "Learn with guidance from mentors and peers through collaborative problem solving.",
   },
   {
+    slug: "teaching-labs",
     title: "Applied Teaching Labs",
     description:
       "Hands-on sessions focused on real-world classroom and education challenges.",
   },
   {
+    slug: "digital-tools",
     title: "Digital Tools & Methods",
     description:
       "Explore modern tools, workflows, and methods to enhance teaching effectiveness.",
   },
   {
+    slug: "workshops",
     title: "Workshops & Events",
     description:
       "Interactive workshops designed to spark ideas and encourage experimentation.",
   },
   {
+    slug: "research",
     title: "Research & Insights",
     description:
       "Curated research-backed insights to support better learning outcomes.",
@@ -41,49 +47,56 @@ const programs = [
 function ProgramCard({
   title,
   description,
+  slug,
   index,
 }: {
   title: string;
   description: string;
+  slug: string;
   index: number;
 }) {
   const { ref, visible } = useInView<HTMLDivElement>();
 
   return (
-    <div
-      ref={ref}
-      className={`
-        bg-white
-        rounded-3xl
-        p-8
-        shadow-xl
-        hover:shadow-2xl
-        transition
-        animate-float
-        fade-in
-        ${visible ? "visible" : ""}
-      `}
-      style={{
-        animationDelay: `${index * 0.3}s`,
-        transitionDelay: `${index * 0.1}s`,
-      }}
-    >
-      <h3 className="text-xl font-bold text-gray-900">
-        {title}
-      </h3>
+    <Link href={`/programs/${slug}`} className="block">
+      <div
+        ref={ref}
+        className={`
+          bg-white
+          rounded-3xl
+          p-8
+          shadow-xl
+          hover:shadow-2xl
+          hover:-translate-y-1
+          transition
+          animate-float
+          fade-in
+          ${visible ? "visible" : ""}
+        `}
+        style={{
+          animationDelay: `${index * 0.3}s`,
+          transitionDelay: `${index * 0.1}s`,
+        }}
+      >
+        <h3 className="text-xl font-bold text-gray-900">
+          {title}
+        </h3>
 
-      <p className="mt-4 text-gray-600 leading-relaxed">
-        {description}
-      </p>
+        <p className="mt-4 text-gray-600 leading-relaxed">
+          {description}
+        </p>
 
-      <div className="mt-6">
-        <span className="inline-block text-sm font-semibold text-[#9B4BF9]">
-          Learn more →
-        </span>
+        <div className="mt-6">
+          <span className="inline-block text-sm font-semibold text-[#9B4BF9]">
+            Learn more →
+          </span>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
+
+
 
 export default function ProgramsPage() {
   return (
@@ -111,7 +124,9 @@ export default function ProgramsPage() {
               key={index}
               title={program.title}
               description={program.description}
+              slug={program.slug}
               index={index}
+
             />
           ))}
         </div>
