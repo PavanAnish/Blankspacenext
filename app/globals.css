@@ -207,3 +207,33 @@ body {
   transform: translateY(0) scale(1);
 }
 
+/* =========================
+   HORIZONTAL TEXT MARQUEE
+   ========================= */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee-left 18s linear infinite;
+}
+
+.marquee-item {
+  margin-right: 3rem;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: #9B4BF9;
+}
