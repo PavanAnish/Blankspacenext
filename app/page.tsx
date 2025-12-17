@@ -60,7 +60,7 @@ export default function Home() {
           </div>
 
           {/* RIGHT FLOATING CARD */}
-          <div className="flex justify-center md:justify-end">
+          {/*<div className="flex justify-center md:justify-end">
             <div
               className="
                 w-[320px]
@@ -71,7 +71,7 @@ export default function Home() {
                 animate-float
               "
             />
-          </div>
+          </div>*/}
 
         </div>
       </section>
