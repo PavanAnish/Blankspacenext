@@ -21,46 +21,39 @@ export default function LogoScrollMotion() {
         return;
 
       const rect = containerRef.current.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
+      const vh = window.innerHeight;
 
-      // Scroll progress (starts in hero, ends slightly into next section)
-      const start = viewportHeight * 0.2;
-      const end = viewportHeight * 1.4;
+      // Scroll range: starts in hero, ends into next section
+      const start = vh * 0.1;
+      const end = vh * 2.0;
 
       const progress = Math.min(
         Math.max((start - rect.top) / (start - end), 0),
         1
       );
 
-      // Path math
-      const leftLength = leftPathRef.current.getTotalLength();
-      const rightLength = rightPathRef.current.getTotalLength();
+      const leftLen = leftPathRef.current.getTotalLength();
+      const rightLen = rightPathRef.current.getTotalLength();
 
-      const leftPoint = leftPathRef.current.getPointAtLength(
-        leftLength * progress
+      const leftPt = leftPathRef.current.getPointAtLength(
+        leftLen * progress
       );
-      const rightPoint = rightPathRef.current.getPointAtLength(
-        rightLength * progress
+      const rightPt = rightPathRef.current.getPointAtLength(
+        rightLen * progress
       );
 
       // Subtle squash only mid-motion
       const squash =
         progress > 0.1 && progress < 0.9 ? 1.06 : 1;
 
-      // LEFT circle (bottom-left → top-left)
       leftCircleRef.current.setAttribute(
         "transform",
-        `translate(${leftPoint.x}, ${leftPoint.y}) scale(${squash}, ${
-          2 - squash
-        })`
+        `translate(${leftPt.x}, ${leftPt.y}) scale(${squash}, ${2 - squash})`
       );
 
-      // RIGHT circle (top-right → bottom-right)
       rightCircleRef.current.setAttribute(
         "transform",
-        `translate(${rightPoint.x}, ${rightPoint.y}) scale(${squash}, ${
-          2 - squash
-        })`
+        `translate(${rightPt.x}, ${rightPt.y}) scale(${squash}, ${2 - squash})`
       );
     };
 
@@ -73,63 +66,78 @@ export default function LogoScrollMotion() {
   return (
     <div
       ref={containerRef}
-      className="absolute right-0 top-0 h-full w-[520px] pointer-events-none"
+      className="
+  absolute 
+  right-0 
+  top-1/2 
+  -translate-y-1/2 
+  translate-x-[-80px]
+  w-[420px] 
+  h-[320px]
+  pointer-events-none
+"
+
     >
       <svg
-        viewBox="0 0 520 420"
+        viewBox="0 0 420 320"
         className="w-full h-full"
         fill="none"
       >
-        {/* Pills / cylinders */}
-        <rect
-          x="120"
-          y="60"
-          width="110"
-          height="280"
-          rx="55"
-          fill="rgba(255,255,255,0.25)"
-          transform="rotate(-30 120 60)"
-        />
-        <rect
-          x="230"
-          y="80"
-          width="110"
-          height="260"
-          rx="55"
-          fill="rgba(255,255,255,0.18)"
-          transform="rotate(-30 230 80)"
-        />
-        <rect
-          x="340"
-          y="100"
-          width="110"
-          height="240"
-          rx="55"
-          fill="rgba(255,255,255,0.14)"
-          transform="rotate(-30 340 100)"
-        />
+        {/* === PILLS (FROM YOUR SVG) === */}
+        <g opacity="0.25">
+          <rect
+            x="80"
+            y="40"
+            width="90"
+            height="240"
+            rx="45"
+            fill="white"
+            transform="rotate(-30 80 40)"
+          />
+          <rect
+            x="160"
+            y="60"
+            width="90"
+            height="220"
+            rx="45"
+            fill="white"
+            transform="rotate(-30 160 60)"
+          />
+          <rect
+            x="240"
+            y="80"
+            width="90"
+            height="200"
+            rx="45"
+            fill="white"
+            transform="rotate(-30 240 80)"
+          />
+        </g>
 
-        {/* Invisible motion paths */}
+        {/* === MOTION PATHS (INVISIBLE) === */}
+        {/* Left circle: bottom-left → top-left */}
         <path
           ref={leftPathRef}
-          d="M 165 300 C 140 240, 140 180, 165 120"
-          fill="none"
-        />
-        <path
-          ref={rightPathRef}
-          d="M 385 120 C 410 180, 410 240, 385 300"
+          d="M 135 260 C 105 210, 105 150, 135 95"
           fill="none"
         />
 
-        {/* Moving circles */}
+        {/* Right circle: top-right → bottom-right */}
+        <path
+          ref={rightPathRef}
+          d="M 305 95 C 335 150, 335 210, 305 260"
+          fill="none"
+        />
+
+        {/* === MOVING CIRCLES === */}
         <circle
           ref={leftCircleRef}
-          r="22"
+          r="18"
           fill="#ffffff"
         />
         <circle
           ref={rightCircleRef}
-          r="22"
+          r="18"
           fill="#ffffff"
         />
       </svg>

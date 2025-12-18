@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import LogoScrollMotion from "@/components/LogoScrollMotion";
 
 export default function Home() {
   return (
@@ -9,11 +10,15 @@ export default function Home() {
 
       {/* HERO SECTION (MERGED + ANIMATED) */}
       <section
+        
         className="relative overflow-hidden"
         style={{
           background: "linear-gradient(120deg, #2b1b4a, #9B4BF9, #C78AFC)",
         }}
       >
+        {/* LOGO SCROLL MOTION (RIGHT SIDE) */}
+      <div className="absolute inset-0 z-10"></div>
+      <LogoScrollMotion />
 
         {/* ROTATING CUBIC RING */}
         <div
