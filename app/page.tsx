@@ -45,10 +45,22 @@ export default function Home() {
 
     {/* RIGHT SVG (STATIC FOR NOW) */}
   <div className="relative hidden md:flex justify-end items-center">
-  <img
+  
+  {/* Soft glow */}
+  <div
+    className="absolute right-6 w-[340px] h-[340px] rounded-full blur-3xl opacity-30"
+    style={{
+      background: "radial-gradient(circle, #ff00fbff, transparent 70%)",
+    }}
+  />
+
+  {/* SVG */}
+    <img
     src="/pills.svg"
     alt="Blankspace visual"
     className="
+      relative
+      z-10
       w-[420px]
       opacity-90
       translate-x-6
@@ -56,7 +68,8 @@ export default function Home() {
       select-none
     "
   />
-  </div>
+</div>
+
 
   </div>
 </section>
