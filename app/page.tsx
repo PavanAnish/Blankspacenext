@@ -44,13 +44,19 @@ export default function Home() {
     </div>
 
     {/* RIGHT SVG (STATIC FOR NOW) */}
-    <div className="hidden md:flex justify-end">
-      <img
-        src="/pills.svg"
-        alt="Blankspace visual"
-        className="w-[380px] opacity-80"
-      />
-    </div>
+  <div className="relative hidden md:flex justify-end items-center">
+  <img
+    src="/pills.svg"
+    alt="Blankspace visual"
+    className="
+      w-[420px]
+      opacity-90
+      translate-x-6
+      translate-y-2
+      select-none
+    "
+  />
+  </div>
 
   </div>
 </section>
