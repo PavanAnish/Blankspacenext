@@ -1,5 +1,7 @@
-<svg width="18918" height="14118" viewBox="0 0 18918 14118" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="11084.7" y="2201.93" width="12499.9" height="3083.57" rx="1541.79" transform="rotate(135.568 11084.7 2201.93)" fill="#C78AFC"/>
-<rect x="13695.1" y="4975.91" width="8896.97" height="3083.57" rx="1541.79" transform="rotate(134.542 13695.1 4975.91)" fill="#C78AFC"/>
-<rect x="7881.73" y="11938.4" width="12530" height="3083.57" rx="1541.79" transform="rotate(-45.0381 7881.73 11938.4)" fill="#C78AFC"/>
+<svg width="18610" height="13945" viewBox="0 0 18610 13945" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="11084.9" y="2201.93" width="12499.9" height="3083.57" rx="1541.79" transform="rotate(135.568 11084.9 2201.93)" fill="#C78AFC"/>
+<ellipse cx="2175.54" cy="8786.29" rx="1529.35" ry="1547.66" transform="rotate(135.568 2175.54 8786.29)" fill="white"/>
+<rect x="7881.93" y="11938.4" width="12530" height="3083.57" rx="1541.79" transform="rotate(-45.0381 7881.93 11938.4)" fill="#C78AFC"/>
+<ellipse cx="16741.8" cy="5248.92" rx="1529.35" ry="1547.66" transform="rotate(133.751 16741.8 5248.92)" fill="white"/>
+<rect x="13695.3" y="4975.91" width="8896.97" height="3083.57" rx="1541.79" transform="rotate(134.542 13695.3 4975.91)" fill="#C78AFC"/>
 </svg>
