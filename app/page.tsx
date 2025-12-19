@@ -34,14 +34,50 @@ export default function Home() {
       </p>
 
       <div className="mt-8 flex gap-4">
-        <button className="bg-white text-[#6b32d1] px-6 py-3 rounded-lg font-semibold">
-          Explore Programs
-        </button>
-        <button className="border border-white/30 text-white px-6 py-3 rounded-lg">
-          Join the Community
-        </button>
-      </div>
-    </div>
+
+  {/* PRIMARY BUTTON */}
+  <button
+    className="
+      bg-white
+      text-[#6b32d1]
+      px-6
+      py-3
+      rounded-lg
+      font-semibold
+      transition
+      duration-300
+      ease-out
+      hover:-translate-y-1
+      hover:shadow-xl
+      active:translate-y-0
+      active:scale-[0.97]
+    "
+  >
+    Explore Programs
+  </button>
+
+  {/* SECONDARY BUTTON */}
+  <button
+    className="
+      border
+      border-white/30
+      text-white
+      px-6
+      py-3
+      rounded-lg
+      transition
+      duration-300
+      ease-out
+      hover:bg-white/10
+      hover:-translate-y-0.5
+      active:scale-[0.98]
+    "
+  >
+    Join the Community
+  </button>
+
+</div>
+
 
     {/* RIGHT SVG (STATIC FOR NOW) */}
   <div className="relative hidden md:flex justify-end items-center">
