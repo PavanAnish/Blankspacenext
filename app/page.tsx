@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import LogoScrollMotion from "@/components/LogoScrollMotion";
+import RevealText from "@/components/RevealText";
 
 export default function Home() {
   return (
@@ -22,11 +23,22 @@ export default function Home() {
     <div>
       <p className="text-purple-200 mb-4">Welcome to</p>
 
-      <h1 className="text-white text-5xl md:text-6xl font-extrabold leading-tight">
-        BLANKSPACE —
-        <br />
-        Ideas that teach.
-      </h1>
+      <div className="space-y-2">
+
+    <RevealText>
+    <h1 className="text-white text-5xl md:text-6xl font-extrabold leading-tight">
+      BLANKSPACE —
+    </h1>
+  </RevealText>
+
+  <RevealText delay={120}>
+    <h2 className="text-purple-100 text-4xl md:text-5xl font-bold">
+      Ideas that teach.
+    </h2>
+  </RevealText>
+
+    </div>
+
 
       <p className="text-purple-100 mt-6 max-w-xl">
         We build learning environments, online programs and community tools

@@ -35,7 +35,7 @@ export default function RevealText({
       style={{ transitionDelay: `${delay}ms` }}
       className={`
         transition
-        duration-700
+        duration-400
         ease-out
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
       `}
