@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import LogoScrollMotion from "@/components/LogoScrollMotion";
 import RevealText from "@/components/RevealText";
+import ParallaxSVG from "@/components/ParallaxSVG";
+
 
 export default function Home() {
   return (
@@ -101,19 +103,18 @@ export default function Home() {
   />
 
   {/* SVG */}
+    <ParallaxSVG>
     <img
-    src="/pills.svg"
-    alt="Blankspace visual"
-    className="
-      relative
-      z-10
-      w-[420px]
-      opacity-90
-      translate-x-6
-      translate-y-2
-      select-none
-    "
-  />
+      src="/pills.svg"
+      alt="Blankspace visual"
+      className="
+        w-[420px]
+        opacity-90
+        translate-x-6
+        select-none
+      "
+    />
+  </ParallaxSVG>
 </div>
 
 
