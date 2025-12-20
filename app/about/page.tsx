@@ -116,7 +116,8 @@ export default function AboutPage() {
             Who Blankspace Is For
           </h2>
 
-          <ul className="list-disc list-inside space-y-3 text-gray-600">
+          <ul className="list-disc list-inside space-y-4 text-lg text-gray-700">
+
             <li>Students who want to build practical, real-world skills</li>
             <li>Those tired of chasing certificates without substance</li>
             <li>People who enjoy learning beyond the classroom</li>
