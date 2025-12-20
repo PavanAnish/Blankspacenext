@@ -39,12 +39,14 @@ export default function AboutPage() {
             Why Blankspace Exists
           </h2>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed">
+
             Many students have ideas, but lack a platform to explore them. Many
             communities impose structure, but leave little room for freedom.
           </p>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed">
+
             Blankspace exists to bridge that gap.
           </p>
 
@@ -58,7 +60,7 @@ export default function AboutPage() {
 
         {/* WHAT WE DO */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
             What We Do
           </h2>
 
@@ -84,7 +86,7 @@ export default function AboutPage() {
 
         {/* CULTURE */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
             Our Culture
           </h2>
 
