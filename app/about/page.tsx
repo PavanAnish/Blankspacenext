@@ -50,7 +50,8 @@ export default function AboutPage() {
             Blankspace exists to bridge that gap.
           </p>
 
-          <ul className="list-disc list-inside space-y-3 text-gray-600">
+          <ul className="list-disc list-inside space-y-4 text-lg text-gray-700">
+
             <li>Beginners are welcomed without judgment</li>
             <li>Curiosity is encouraged over credentials</li>
             <li>Skills are developed through real work, not just theory</li>
@@ -69,7 +70,8 @@ export default function AboutPage() {
             Blankspace brings together students with interests in:
           </p>
 
-          <ul className="list-disc list-inside space-y-3 text-gray-600">
+          <ul className="list-disc list-inside space-y-4 text-lg text-gray-700">
+
             <li>Technology and development</li>
             <li>Design and creative thinking</li>
             <li>Content, ideas, and open discussions</li>
@@ -92,7 +94,8 @@ export default function AboutPage() {
             Our Culture
           </h2>
 
-          <ul className="list-disc list-inside space-y-3 text-gray-600">
+          <ul className="list-disc list-inside space-y-4 text-lg text-gray-700">
+
             <li>Action over talk</li>
             <li>Growth over perfection</li>
             <li>Community over competition</li>
