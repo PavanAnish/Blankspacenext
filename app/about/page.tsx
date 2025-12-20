@@ -26,7 +26,7 @@ export default function AboutPage() {
 
           <p className="text-lg text-gray-600 leading-relaxed">
             We’re not here to chase trends. We’re here to{" "}
-            <span className="font-semibold text-gray-900">
+            <span className="font-bold text-gray-900">
               create, learn, and ship meaningful work
             </span>.
           </p>
@@ -81,7 +81,7 @@ export default function AboutPage() {
           <p className="text-lg text-gray-700 leading-relaxed">
 
             From small experiments to meaningful initiatives, we focus on{" "}
-            <span className="font-semibold text-gray-900">
+            <span className="font-bold text-gray-900">
               learning by doing
             </span>{" "}
             and growing through shared experience.
@@ -127,7 +127,7 @@ export default function AboutPage() {
           <p className="text-lg text-gray-700 leading-relaxed">
 
             You don’t need to be an expert.  
-            <span className="font-semibold text-gray-900">
+            <span className="font-bold text-gray-900">
               You just need the willingness to start.
             </span>
           </p>
