@@ -12,7 +12,8 @@ export default function AboutPage() {
 
         {/* ABOUT */}
         <div className="space-y-6">
-          <h1 className="text-5xl font-extrabold text-gray-900">
+          <h1 className="text-6xl md:text-7xl font-black text-gray-900 tracking-tight">
+
             About Blankspace
           </h1>
 
