@@ -97,7 +97,8 @@ export default function AboutPage() {
             <li>Consistency over hype</li>
           </ul>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed">
+
             No gatekeeping. No manufactured motivation.  
             Just people showing up, learning together, and improving one step at
             a time.
@@ -117,7 +118,8 @@ export default function AboutPage() {
             <li>Anyone who believes progress comes from trying and showing up</li>
           </ul>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed">
+
             You don’t need to be an expert.  
             <span className="font-semibold text-gray-900">
               You just need the willingness to start.
@@ -131,7 +133,8 @@ export default function AboutPage() {
             Our Vision
           </h2>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed">
+
             To grow into a self-driven college community where students create
             real impact through skills, ideas, and collaboration — and graduate
             with <span className="font-semibold text-gray-900">
