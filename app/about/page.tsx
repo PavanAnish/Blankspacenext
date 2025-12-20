@@ -143,7 +143,7 @@ export default function AboutPage() {
 
             To grow into a self-driven college community where students create
             real impact through skills, ideas, and collaboration — and graduate
-            with <span className="font-semibold text-gray-900">
+            with <span className="font-bold text-gray-900">
               more than just a degree
             </span>.
           </p>
