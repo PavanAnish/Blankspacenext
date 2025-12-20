@@ -34,7 +34,8 @@ export default function AboutPage() {
 
         {/* WHY */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+
             Why Blankspace Exists
           </h2>
 
