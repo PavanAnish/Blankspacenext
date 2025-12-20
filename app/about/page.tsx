@@ -64,7 +64,8 @@ export default function AboutPage() {
             What We Do
           </h2>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed">
+
             Blankspace brings together students with interests in:
           </p>
 
@@ -75,7 +76,8 @@ export default function AboutPage() {
             <li>Projects, workshops, and collaborative learning</li>
           </ul>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-lg text-gray-700 leading-relaxed">
+
             From small experiments to meaningful initiatives, we focus on{" "}
             <span className="font-semibold text-gray-900">
               learning by doing
