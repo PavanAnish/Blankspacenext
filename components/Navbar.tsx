@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="w-full bg-[#2b1b4a] border-b border-white/10">
+    <nav className="w-full bg-[#342043] border-b border-white/10">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
 
         {/* Logo */}
