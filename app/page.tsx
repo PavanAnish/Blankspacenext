@@ -13,7 +13,13 @@ export default function Home() {
 
       {/* HERO SECTION (MERGED + ANIMATED) */}
       <section
-  className="relative overflow-hidden"
+  className="
+    relative 
+    overflow-hidden
+    min-h-screen
+    flex
+    items-center
+  "
   style={{
     background: "linear-gradient(120deg, #2b1b4a, #9B4BF9, #C78AFC)",
   }}
