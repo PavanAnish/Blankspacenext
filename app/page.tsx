@@ -183,7 +183,7 @@ export default function Home() {
 </section>
 
 {/* SECTION TRANSITION */}
-<div className="relative h-48 overflow-hidden">
+<div className="relative h-20 overflow-hidden">
   <div
     className="absolute inset-0"
     style={{
@@ -194,13 +194,20 @@ export default function Home() {
 </div>
 
      {/* COMMUNITY VALUES SECTION */}
-<section className="relative py-40 overflow-hidden bg-transparent">
+<section
+  className="relative py-32 overflow-hidden"
+  style={{
+    background:
+      "linear-gradient(180deg, #f7f5fb 0%, #efe9ff 40%, #f7f5fb 100%)",
+  }}
+>
 
-    <div
+{/* SOFT PURPLE AMBIENT LIGHT */}
+<div
   className="absolute inset-0 z-0"
   style={{
     background:
-      "radial-gradient(circle at 50% 0%, rgba(155,75,249,0.18), transparent 60%)",
+      "radial-gradient(circle at 30% 10%, rgba(155,75,249,0.25), transparent 55%)",
   }}
 />
 
@@ -235,11 +242,13 @@ export default function Home() {
         Built Around People
       </p>
 
-      <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+      <h2 className="text-5xl md:text-6xl font-extrabold text-[#1e1333]">
+
         Our Community Values
       </h2>
 
-      <p className="mt-6 text-lg text-gray-700 max-w-md">
+      <p className="mt-6 text-gray-600">
+
         Blankspace is a people-first community focused on learning,
         collaboration, and real-world growth.
       </p>
@@ -275,12 +284,11 @@ export default function Home() {
             group
             rounded-2xl
             bg-white/80
-            backdrop-blur-lg
+            backdrop-blur-xl
             border
-            border-white/40
-            shadow-sm
-            open:shadow-lg
-            transition
+            border-purple-200/40
+            shadow-lg
+            
           "
         >
           <summary className="flex cursor-pointer items-center justify-between px-6 py-5 font-semibold text-gray-900">
