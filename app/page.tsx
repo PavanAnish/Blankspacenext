@@ -28,14 +28,14 @@ export default function Home() {
      ===================== */}
   <div className="absolute inset-0 z-0 pointer-events-none">
     <div
-      className="absolute -top-24 left-1/4 w-[520px] h-[520px] rounded-full blur-[140px] opacity-30"
+      className="absolute -top-24 left-1/4 w-[520px] h-[520px] rounded-full blur-[140px] opacity-35"
       style={{
         background: "#9B4BF9",
         animation: "floatLight 32s ease-in-out infinite",
       }}
     />
     <div
-      className="absolute bottom-[-160px] right-1/4 w-[560px] h-[560px] rounded-full blur-[160px] opacity-25"
+      className="absolute bottom-[-160px] right-1/4 w-[560px] h-[560px] rounded-full blur-[160px] opacity-30"
       style={{
         background: "#C78AFC",
         animation: "floatLight 36s ease-in-out infinite reverse",
@@ -182,14 +182,56 @@ export default function Home() {
   </div>
 </section>
 
+{/* SECTION TRANSITION */}
+<div className="relative h-48 overflow-hidden">
+  <div
+    className="absolute inset-0"
+    style={{
+      background:
+        "linear-gradient(to bottom, rgba(18,11,36,0), rgba(247,245,251,1))",
+    }}
+  />
+</div>
 
-      {/* COMMUNITY VALUES SECTION */}
-      <section className="relative py-28 overflow-hidden bg-white">
+     {/* COMMUNITY VALUES SECTION */}
+<section className="relative py-40 overflow-hidden bg-transparent">
+
+    <div
+  className="absolute inset-0 z-0"
+  style={{
+    background:
+      "radial-gradient(circle at 50% 0%, rgba(155,75,249,0.18), transparent 60%)",
+  }}
+/>
+
+  {/* =====================
+      AMBIENT BACKGROUND LIGHTS
+     ===================== */}
+  <div className="absolute inset-0 z-0 pointer-events-none">
+    <div
+      className="absolute -top-32 left-1/4 w-[520px] h-[520px] rounded-full blur-[160px] opacity-25"
+      style={{
+        background: "#9B4BF9",
+        animation: "floatLight 42s ease-in-out infinite",
+      }}
+    />
+    <div
+      className="absolute bottom-[-180px] right-1/4 w-[560px] h-[560px] rounded-full blur-[180px] opacity-20"
+      style={{
+        background: "#C78AFC",
+        animation: "floatLight 46s ease-in-out infinite reverse",
+      }}
+    />
+  </div>
+
+  {/* =====================
+      CONTENT
+     ===================== */}
   <div className="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-16">
 
     {/* LEFT CONTENT */}
     <div>
-      <p className="uppercase tracking-widest text-sm text-purple-500 font-semibold mb-4">
+      <p className="uppercase tracking-widest text-sm text-purple-600 font-semibold mb-4">
         Built Around People
       </p>
 
@@ -197,7 +239,7 @@ export default function Home() {
         Our Community Values
       </h2>
 
-      <p className="mt-6 text-gray-600 max-w-md">
+      <p className="mt-6 text-lg text-gray-700 max-w-md">
         Blankspace is a people-first community focused on learning,
         collaboration, and real-world growth.
       </p>
@@ -205,32 +247,41 @@ export default function Home() {
 
     {/* RIGHT ACCORDION */}
     <div className="space-y-4">
-
       {[
         {
           title: "Mentorship & Support",
           content:
-            "Connect with mentors, educators, and peers who guide you through learning and growth."
+            "Connect with mentors, educators, and peers who guide you through learning and growth.",
         },
         {
           title: "Real-World Collaboration",
           content:
-            "Work on meaningful projects with people who value practical outcomes."
+            "Work on meaningful projects with people who value practical outcomes.",
         },
         {
           title: "Learning Resources",
           content:
-            "Access curated tools, templates, and shared knowledge built by the community."
+            "Access curated tools, templates, and shared knowledge built by the community.",
         },
         {
           title: "Events & Workshops",
           content:
-            "Participate in discussions, workshops, and meetups that spark ideas and action."
-        }
+            "Participate in discussions, workshops, and meetups that spark ideas and action.",
+        },
       ].map((item, index) => (
         <details
           key={index}
-          className="group rounded-2xl border border-gray-200 bg-white shadow-sm open:shadow-lg transition"
+          className="
+            group
+            rounded-2xl
+            bg-white/80
+            backdrop-blur-lg
+            border
+            border-white/40
+            shadow-sm
+            open:shadow-lg
+            transition
+          "
         >
           <summary className="flex cursor-pointer items-center justify-between px-6 py-5 font-semibold text-gray-900">
             {item.title}
@@ -239,46 +290,15 @@ export default function Home() {
             </span>
           </summary>
 
-          <div className="px-6 pb-5 text-gray-600">
+          <div className="px-6 pb-5 text-gray-700">
             {item.content}
           </div>
         </details>
       ))}
-
     </div>
+
   </div>
-  {/* DEBUG: CUBIC ROTATION */}
-<div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-  <div className="cubic-3d" />
-</div>
-
-
-    
-  {/* BLURRED GRADIENT DECORATION */}
-  <div
-    className="absolute -left-40 top-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full opacity-40 blur-3xl"
-    style={{
-      background: "radial-gradient(circle, #C78AFC, #9B4BF9)"
-    }}
-  />
-
-  {/* CUBIC RING DECORATION */}
-  <div
-    className="
-      absolute
-      right-[-120px]
-      bottom-[-120px]
-      w-[360px]
-      h-[360px]
-      rounded-full
-      opacity-30
-      blur-md
-      animate-spin-slow
-      bg-[conic-gradient(from_0deg,#9B4BF9,#C78AFC,#9B4BF9)]
-      ring-mask
-    "
-  />
-      </section>
+</section>
 
           </main>
       );
