@@ -1,6 +1,25 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
+    <nav
+  className={`
+    fixed top-0 left-0 w-full z-50
+    transition-all duration-300
+    ${
+      isHome
+        ? "bg-white/10 backdrop-blur-xl border-b border-white/10"
+        : "bg-[#2b1b4a] border-b border-white/10"
+    }
+  `}
+>
+
+
 
       <div className="max-w-7xl mx-auto flex items-center justify-between px-8 py-4">
 
