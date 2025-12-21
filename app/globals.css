@@ -246,3 +246,49 @@ body {
   text-shadow: 0 0 20px rgba(155, 75, 249, 0.35);
 
 }
+/* =========================
+   HERO LIGHT BACKGROUND
+   ========================= */
+
+.hero-lights {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-light {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.25;
+  animation: float-light 32s ease-in-out infinite;
+}
+
+.hero-light.purple {
+  background: #9B4BF9;
+  top: -10%;
+  left: 10%;
+}
+
+.hero-light.violet {
+  background: #C78AFC;
+  bottom: -15%;
+  right: 10%;
+  animation-delay: -16s;
+}
+
+@keyframes float-light {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(60px, -40px) scale(1.08);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+

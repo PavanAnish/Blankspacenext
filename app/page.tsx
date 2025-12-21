@@ -11,42 +11,63 @@ export default function Home() {
     
       <Navbar />
 
-      {/* HERO SECTION (MERGED + ANIMATED) */}
       <section
   className="
-    relative 
-    overflow-hidden
+    relative
     min-h-screen
     flex
     items-center
+    overflow-hidden
   "
   style={{
-    background: "linear-gradient(120deg, #2b1b4a, #9B4BF9, #C78AFC)",
+    background: "linear-gradient(120deg, #120b24, #2b1b4a)",
   }}
 >
-  {/* HERO CONTENT GRID */}
+  {/* =====================
+      BACKGROUND LIGHTS
+     ===================== */}
+  <div className="absolute inset-0 z-0 pointer-events-none">
+    <div
+      className="absolute -top-24 left-1/4 w-[520px] h-[520px] rounded-full blur-[140px] opacity-30"
+      style={{
+        background: "#9B4BF9",
+        animation: "floatLight 32s ease-in-out infinite",
+      }}
+    />
+    <div
+      className="absolute bottom-[-160px] right-1/4 w-[560px] h-[560px] rounded-full blur-[160px] opacity-25"
+      style={{
+        background: "#C78AFC",
+        animation: "floatLight 36s ease-in-out infinite reverse",
+      }}
+    />
+  </div>
+
+  {/* Contrast overlay for readability */}
+  <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/40 via-transparent to-black/10" />
+
+  {/* =====================
+      HERO CONTENT GRID
+     ===================== */}
   <div className="relative z-10 max-w-7xl mx-auto px-8 py-28 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-    
+
     {/* LEFT CONTENT */}
     <div>
       <p className="text-purple-200 mb-4">Welcome to</p>
 
       <div className="space-y-2">
+        <RevealText>
+          <h1 className="text-white text-5xl md:text-6xl font-extrabold leading-tight">
+            BLANKSPACE —
+          </h1>
+        </RevealText>
 
-    <RevealText>
-    <h1 className="text-white text-5xl md:text-6xl font-extrabold leading-tight">
-      BLANKSPACE —
-    </h1>
-  </RevealText>
-
-  <RevealText delay={120}>
-    <h2 className="text-purple-100 text-4xl md:text-5xl font-bold">
-      Ideas that teach.
-    </h2>
-  </RevealText>
-
-    </div>
-
+        <RevealText delay={120}>
+          <h2 className="text-purple-100 text-4xl md:text-5xl font-bold">
+            Ideas that teach.
+          </h2>
+        </RevealText>
+      </div>
 
       <p className="text-purple-100 mt-6 max-w-xl">
         We build learning environments, online programs and community tools
@@ -54,79 +75,78 @@ export default function Home() {
       </p>
 
       <div className="mt-8 flex gap-4">
-          {/* PRIMARY BUTTON */}
-  <button
-    className="
-      bg-white
-      text-[#6b32d1]
-      px-6
-      py-3
-      rounded-lg
-      font-semibold
-      transition
-      duration-300
-      ease-out
-      hover:-translate-y-1
-      hover:shadow-xl
-      active:translate-y-0
-      active:scale-[0.97]
-    "
-  >
-    Explore Programs
-  </button>
+        {/* PRIMARY BUTTON */}
+        <button
+          className="
+            bg-white
+            text-[#6b32d1]
+            px-6
+            py-3
+            rounded-lg
+            font-semibold
+            transition
+            duration-300
+            ease-out
+            hover:-translate-y-1
+            hover:shadow-xl
+            active:translate-y-0
+            active:scale-[0.97]
+          "
+        >
+          Explore Programs
+        </button>
 
-  {/* SECONDARY BUTTON */}
-  <button
-    className="
-      border
-      border-white/30
-      text-white
-      px-6
-      py-3
-      rounded-lg
-      transition
-      duration-300
-      ease-out
-      hover:bg-white/10
-      hover:-translate-y-0.5
-      active:scale-[0.98]
-    "
-  >
-    Join the Community
-  </button>
+        {/* SECONDARY BUTTON */}
+        <button
+          className="
+            border
+            border-white/30
+            text-white
+            px-6
+            py-3
+            rounded-lg
+            transition
+            duration-300
+            ease-out
+            hover:bg-white/10
+            hover:-translate-y-0.5
+            active:scale-[0.98]
+          "
+        >
+          Join the Community
+        </button>
       </div>
     </div>
 
-    {/* RIGHT SVG (STATIC FOR NOW) */}
-  <div className="relative hidden md:flex justify-end items-center">
-  
-  {/* Soft glow */}
-  <div
-    className="absolute right-6 w-[340px] h-[340px] rounded-full blur-3xl opacity-30"
-    style={{
-      background: "radial-gradient(circle, #ff00fbff, transparent 70%)",
-    }}
-  />
+    {/* RIGHT SVG */}
+    <div className="relative hidden md:flex justify-end items-center">
+      {/* Soft glow */}
+      <div
+        className="absolute right-6 w-[340px] h-[340px] rounded-full blur-3xl opacity-30"
+        style={{
+          background: "radial-gradient(circle, #9B4BF9, transparent 70%)",
+        }}
+      />
 
-  {/* SVG */}
-    <img
-    src="/pills.svg"
-    alt="Blankspace visual"
-    className="
-      relative
-      z-10
-      w-[420px]
-      opacity-90
-      translate-x-6
-      translate-y-2
-      select-none
-    "
-  />
-</div>
-
+      {/* SVG */}
+      <img
+        src="/pills.svg"
+        alt="Blankspace visual"
+        className="
+          relative
+          z-10
+          w-[420px]
+          opacity-90
+          translate-x-6
+          translate-y-2
+          select-none
+        "
+      />
+    </div>
 
   </div>
 </section>
+
 
 
       {/* ================= MARQUEE SECTION ================= */}
