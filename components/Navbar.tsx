@@ -27,8 +27,8 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <img src="/logo.png" alt="Blankspace" className="h-9 w-auto" />
           <div>
-            <p className="text-white font-semibold leading-tight">BLANKSPACE1</p>
-            <p className="text-xs text-purple-200">BLANKSPACE</p>
+            <p className="text-white font-semibold leading-tight">BLANKSPACE</p>
+            <p className="text-xs text-purple-200">-BLANKSPACE-</p>
           </div>
         </div>
 
