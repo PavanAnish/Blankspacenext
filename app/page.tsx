@@ -69,29 +69,38 @@ export default function Home() {
       </section>
 
       {/* ================= MARQUEE ================= */}
-      <section className="relative py-24 overflow-hidden">
+      
+<section className="relative py-2 overflow-hidden">
         <div className="marquee">
           <div className="marquee-track text-white/80">
-            {[
-              "LEARN",
-              "BUILD",
-              "BLANKSPACE",
-              "COLLABORATE",
-              "MENTOR",
-              "CREATE",
-            ].map((word, i) => (
-              <span
-                key={i}
-                className={`marquee-item ${
-                  word === "BLANKSPACE" ? "text-[#C78AFC]" : ""
-                }`}
-              >
-                {word}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+
+      {/* First set */}
+      <span className="marquee-item">LEARN</span>
+      <span className="marquee-item">BUILD</span>
+
+      <span className="marquee-item marquee-highlight">
+        BLANKSPACE
+      </span>
+
+      <span className="marquee-item">COLLABORATE</span>
+      <span className="marquee-item">MENTOR</span>
+      <span className="marquee-item">CREATE</span>
+
+      {/* Duplicate set */}
+      <span className="marquee-item">LEARN</span>
+      <span className="marquee-item">BUILD</span>
+
+      <span className="marquee-item marquee-highlight">
+        BLANKSPACE
+      </span>
+
+      <span className="marquee-item">COLLABORATE</span>
+      <span className="marquee-item">MENTOR</span>
+      <span className="marquee-item">CREATE</span>
+
+    </div>
+  </div>
+</section>
 
       {/* ================= COMMUNITY ================= */}
       <section className="relative py-40 overflow-hidden">
