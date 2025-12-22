@@ -24,16 +24,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-        <script
-        type="module"
-        src="https://unpkg.com/@splinetool/viewer@1.12.16/build/spline-viewer.js"
-      ></script>
+      <body className="relative min-h-screen overflow-x-hidden text-white">
+  
+  {/* GLOBAL BACKGROUND */}
+  <div className="fixed inset-0 -z-10">
+    {/* Base gradient */}
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          "linear-gradient(135deg, #1b0f2e 0%, #2b1b4a 30%, #9B4BF9 65%, #C78AFC 100%)",
+      }}
+    />
 
-      </body>
+    {/* Ambient light blobs */}
+    <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#9B4BF9]/30 rounded-full blur-[140px]" />
+    <div className="absolute top-[40%] -right-40 w-[500px] h-[500px] bg-[#C78AFC]/25 rounded-full blur-[140px]" />
+    <div className="absolute bottom-[-20%] left-[20%] w-[700px] h-[700px] bg-[#6b32d1]/20 rounded-full blur-[180px]" />
+  </div>
+
+  {children}
+</body>
+
     </html>
   );
 }

@@ -150,7 +150,7 @@ export default function Home() {
 
 
       {/* ================= MARQUEE SECTION ================= */}
-<section className="bg-white py-16">
+<section className="bg-white py-16 ">
   <div className="marquee">
     <div className="marquee-track">
 
@@ -195,12 +195,20 @@ export default function Home() {
 
      {/* COMMUNITY VALUES SECTION */}
 <section
-  className="relative py-32 overflow-hidden"
+  className="relative py-40 overflow-hidden"
   style={{
     background:
       "linear-gradient(180deg, #f7f5fb 0%, #efe9ff 40%, #f7f5fb 100%)",
   }}
 >
+{/* DARK AMBIENT LAYER */}
+<div
+  className="absolute inset-0 z-0"
+  style={{
+    background:
+      "radial-gradient(circle at 40% 0%, rgba(155,75,249,0.25), transparent 55%)",
+  }}
+/>
 
 {/* SOFT PURPLE AMBIENT LIGHT */}
 <div
