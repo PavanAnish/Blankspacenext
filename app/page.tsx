@@ -51,14 +51,40 @@ export default function Home() {
             </p>
 
             <div className="mt-8 flex gap-4">
-              <button className="bg-white text-[#6b32d1] px-6 py-3 rounded-lg font-semibold hover:-translate-y-1 transition">
-                Explore Programs
-              </button>
+  <MagneticButton
+    className="
+      bg-white
+      text-[#6b32d1]
+      px-6
+      py-3
+      rounded-lg
+      font-semibold
+      hover:-translate-y-1
+      hover:shadow-xl
+      active:scale-[0.96]
+    "
+  >
+    Explore Programs
+  </MagneticButton>
 
-              <button className="border border-white/30 px-6 py-3 rounded-lg hover:-translate-y-1 bg-white/10 transition">
-                Join the Community
-              </button>
-            </div>
+  <MagneticButton
+    className="
+      border
+      border-white/30
+      text-white
+      px-6
+      py-3
+      rounded-lg
+      hover:-translate-y-1
+      hover:bg-white/10
+      hover:shadow-lg
+      active:scale-[0.97]
+    "
+  >
+    Join the Community
+  </MagneticButton>
+</div>
+
           </div>
 
           {/* RIGHT SVG */}
