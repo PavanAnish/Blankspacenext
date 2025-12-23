@@ -11,7 +11,7 @@ export default function Home() {
 
         {/* BACKGROUND LIGHTS */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <div
+          {/*<div
             className="absolute -top-32 left-1/4 w-[520px] h-[520px] rounded-full blur-[160px] opacity-35"
             style={{
               background: "#9B4BF9",
@@ -24,7 +24,7 @@ export default function Home() {
               background: "#C78AFC",
               animation: "floatLight 42s ease-in-out infinite reverse",
             }}
-          />
+          />*/}
         </div>
 
         {/* HERO CONTENT */}
@@ -54,7 +54,7 @@ export default function Home() {
                 Explore Programs
               </button>
 
-              <button className="border border-white/30 px-6 py-3 rounded-lg hover:bg-white/10 transition">
+              <button className="border border-white/30 px-6 py-3 rounded-lg hover:-translate-y-1 bg-white/10 transition">
                 Join the Community
               </button>
             </div>
@@ -67,6 +67,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/* ================= SEAM GLOW ================= */}
+<div className="relative h-0 overflow-visible pointer-events-none">
+  <div
+    className="
+      absolute
+      left-1/2
+      top-0
+      -translate-x-1/2
+      -translate-y-1/2
+      w-[520px]
+      h-[520px]
+      rounded-full
+      blur-[160px]
+      opacity-40
+      bg-[#9B4BF9]
+    "
+  />
+</div>
 
       {/* ================= MARQUEE ================= */}
       
