@@ -10,8 +10,13 @@ export default function MagneticButton({
 }) {
   const ref = useRef<HTMLButtonElement>(null);
 
+  // Detect touch devices (mobile / tablet)
+  const isTouch =
+    typeof window !== "undefined" &&
+    ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+
   function handleMouseMove(e: React.MouseEvent) {
-    if (!ref.current) return;
+    if (!ref.current || isTouch) return;
 
     const rect = ref.current.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
@@ -21,7 +26,7 @@ export default function MagneticButton({
   }
 
   function reset() {
-    if (!ref.current) return;
+    if (!ref.current || isTouch) return;
     ref.current.style.transform = "translate(0px, 0px)";
   }
 
@@ -31,7 +36,11 @@ export default function MagneticButton({
       onMouseMove={handleMouseMove}
       onMouseLeave={reset}
       className={className}
-      style={{ transition: "transform 0.25s ease-out" }}
+      style={{
+        transition: isTouch
+          ? "transform 0.15s ease-out"
+          : "transform 0.25s ease-out",
+      }}
     >
       {children}
     </button>
