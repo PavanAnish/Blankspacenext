@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import RevealText from "@/components/RevealText";
+import MagneticButton from "@/components/MagneticButton";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
 
         {/* BACKGROUND LIGHTS */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          {/*<div
+          <div
             className="absolute -top-32 left-1/4 w-[520px] h-[520px] rounded-full blur-[160px] opacity-35"
             style={{
               background: "#9B4BF9",
@@ -24,7 +25,7 @@ export default function Home() {
               background: "#C78AFC",
               animation: "floatLight 42s ease-in-out infinite reverse",
             }}
-          />*/}
+          />
         </div>
 
         {/* HERO CONTENT */}
