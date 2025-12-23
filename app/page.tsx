@@ -115,7 +115,7 @@ export default function Home() {
 
       {/* ================= MARQUEE ================= */}
       
-<section className="relative py-2 overflow-hidden">
+<section className="relative py-0 overflow-hidden">
         <div className="marquee">
           <div className="marquee-track text-white/80">
 

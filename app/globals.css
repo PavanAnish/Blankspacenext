@@ -294,5 +294,76 @@ body {
     transform: translate(0, 0) scale(1);
   }
 }
+/* ===============================
+   GLOBAL AMBIENT BACKGROUND
+   =============================== */
+
+.ambient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+    circle at top center,
+    #120b24 0%,
+    #0b0716 40%,
+    #07040f 100%
+  );
+  overflow: hidden;
+}
+
+/* BASE GLOW */
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(160px);
+  opacity: 0.35;
+  animation: floatGlow 40s ease-in-out infinite;
+}
+
+/* MAIN "SUN" GLOW (Hero → Marquee) */
+.glow-main {
+  width: 700px;
+  height: 700px;
+  background: #9B4BF9;
+  top: 55vh;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-duration: 50s;
+}
+
+/* SECONDARY GLOW */
+.glow-secondary {
+  width: 500px;
+  height: 500px;
+  background: #C78AFC;
+  top: 10%;
+  left: 15%;
+  opacity: 0.25;
+  animation-duration: 60s;
+}
+
+/* TERTIARY GLOW */
+.glow-tertiary {
+  width: 420px;
+  height: 420px;
+  background: #9B4BF9;
+  bottom: 10%;
+  right: 10%;
+  opacity: 0.2;
+  animation-duration: 70s;
+}
+
+/* FLOATING MOTION */
+@keyframes floatGlow {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
 
 
