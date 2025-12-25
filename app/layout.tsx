@@ -30,10 +30,17 @@ export default function RootLayout({
     <AmbientParallax />
   {/* GLOBAL AMBIENT BACKGROUND */}
   <div className="ambient-bg pointer-events-none">
+  <div className="glow-wrapper">
     <div className="glow glow-main" />
+  </div>
+  <div className="glow-wrapper">
     <div className="glow glow-secondary" />
+  </div>
+  <div className="glow-wrapper">
     <div className="glow glow-tertiary" />
   </div>
+</div>
+
 
   {/* SITE CONTENT */}
   <div className="relative z-10">
