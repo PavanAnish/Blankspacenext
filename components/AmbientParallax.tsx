@@ -9,7 +9,7 @@ export default function AmbientParallax() {
       const scrollY = window.scrollY;
 
       glows.forEach((glow, index) => {
-        const speed = (index + 1) * 0.04; // VERY subtle
+        const speed = (index + 1) * 0.08; // VERY subtle
         glow.style.transform = `translateY(${scrollY * speed}px)`;
       });
     }
