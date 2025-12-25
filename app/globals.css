@@ -356,15 +356,16 @@ body {
 /* FLOATING MOTION */
 @keyframes floatGlow {
   0% {
-    transform: translate(0, 0) scale(1);
+    transform: scale(1);
   }
   50% {
-    transform: translate(40px, -30px) scale(1.08);
+    transform: scale(1.08);
   }
   100% {
-    transform: translate(0, 0) scale(1);
+    transform: scale(1);
   }
 }
+
 /* ===============================
    NOISE GRAIN OVERLAY
    =============================== */
@@ -391,6 +392,9 @@ body {
 }
 .glow {
   animation: floatGlow 40s ease-in-out infinite;
+}
+.glow-wrapper {
+  outline: 2px dashed red;
 }
 
 
