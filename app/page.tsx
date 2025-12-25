@@ -113,7 +113,7 @@ export default function Home() {
   />
 </div>
 
-      {/* ================= MARQUEE ================= */}
+    {/* ================= MARQUEE ================= */}
       
 <section className="relative py-0 overflow-hidden">
         <div className="marquee">
