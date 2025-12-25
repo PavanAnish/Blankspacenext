@@ -8,12 +8,22 @@ export default function AmbientParallax() {
 
     function onScroll() {
       const scrollY = window.scrollY;
+      const vh = window.innerHeight;
 
       wrappers.forEach((wrapper, index) => {
-        const depth = [0.18, 0.1, 0.06][index] || 0.08;
-        const y = scrollY * depth;
+        // Normalize scroll (0 → 1 per viewport)
+        const progress = Math.min(scrollY / vh, 2);
 
-        wrapper.style.transform = `translate3d(0, ${y}px, 0)`;
+        // Depth-based intensity
+        const baseOpacity = [0.45, 0.28, 0.2][index] || 0.2;
+        const opacity =
+          baseOpacity - progress * 0.12;
+
+        const scale =
+          1 + Math.min(progress * 0.08, 0.12);
+
+        wrapper.style.opacity = `${Math.max(opacity, 0.08)}`;
+        wrapper.style.transform = `scale(${scale})`;
       });
     }
 
