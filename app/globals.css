@@ -393,9 +393,7 @@ body {
 .glow {
   animation: floatGlow 40s ease-in-out infinite;
 }
-.glow-wrapper {
-  outline: 2px dashed red;
-}
+
 
 
 
