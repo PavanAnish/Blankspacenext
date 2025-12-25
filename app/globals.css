@@ -390,12 +390,9 @@ body {
   }
 }
 .glow {
-  will-change: transform;
-  transition: transform 0.35s ease-out;
+  animation: floatGlow 40s ease-in-out infinite;
 }
-.glow {
-  outline: 2px solid rgba(255,255,255,0.2);
-}
+
 
 
 
