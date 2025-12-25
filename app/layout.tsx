@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import AmbientParallax from "@/components/AmbientParallax";
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -25,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative overflow-x-hidden">
-
+    <AmbientParallax />
   {/* GLOBAL AMBIENT BACKGROUND */}
   <div className="ambient-bg pointer-events-none">
     <div className="glow glow-main" />
